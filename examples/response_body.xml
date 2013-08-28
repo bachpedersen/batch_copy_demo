@@ -1,0 +1,34 @@
+<atom:feed xmlns:atom="http://www.w3.org/2005/Atom" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"
+           xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd"
+           xmlns:ns4="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+           xmlns:ns5="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+           xmlns:ns6="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns7="http://nsi.dk/2011/10/21/StamdataKrs/"
+           xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <atom:id>tag:nsi.dk,2011:ddv/diseases/v1</atom:id>
+    <atom:updated>2013-08-28T09:30:44.302Z</atom:updated>
+    <atom:title>Stamdata Registry Feed</atom:title>
+    <atom:author>
+        <atom:name>National Sundheds IT</atom:name>
+    </atom:author>
+    <atom:entry>
+        <atom:id>tag:nsi.dk,2011:ddv/diseases/v1/13552274570000000001</atom:id>
+        <atom:title/>
+        <atom:updated>2012-12-11T12:04:17.000Z</atom:updated>
+        <atom:content type="application/xml">
+            <diseases:diseases xmlns:diseases="http://nsi.dk/-/stamdata/3.0/ddv"
+                               xmlns="http://nsi.dk/-/stamdata/3.0/ddv">
+                <DiseaseIdentifier>1</DiseaseIdentifier>
+                <versionID>1</versionID>
+                <name>Anthrax</name>
+                <name_dk>Anthrax</name_dk>
+                <ATCCode>J07AC</ATCCode>
+                <ATCText>Anthrax vacciner</ATCText>
+                <ddvModifiedDate>2010-05-03T02:31:54.000+02:00</ddvModifiedDate>
+                <ddvValidFrom>2002-09-01T00:00:00.000+02:00</ddvValidFrom>
+                <ddvValidTo>2010-05-04T12:00:00.000+02:00</ddvValidTo>
+                <ValidFrom>2012-12-11T13:04:17.000+01:00</ValidFrom>
+                <ValidTo>2999-12-31T01:00:00.000+01:00</ValidTo>
+            </diseases:diseases>
+        </atom:content>
+    </atom:entry>
+</atom:feed>
