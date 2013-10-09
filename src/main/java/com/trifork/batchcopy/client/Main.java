@@ -37,7 +37,7 @@ public class Main {
         BatchCopyClient client = applicationContext.getBean(BatchCopyClient.class);
         String lastToken = null;
         do {
-            lastToken = client.performRequest("ddv", "diseases", lastToken);
+            lastToken = client.performRequest("doseringsforslag", "dosageunit", lastToken);
             System.out.println("Press enter to read another record");
             System.in.read();
         } while (true);

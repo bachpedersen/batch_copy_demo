@@ -35,6 +35,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.*;
@@ -100,6 +101,27 @@ public class BatchCopyClient {
     }
 
     private String extractLastToken(Node atomFeedNode) {
+        // <atom:feed ..
+        //   <atom:id> ..
+        //   <atom:updated> ..
+        //   <atom:title> ..
+        //   <atom:author> ..
+        //   <atom:entry> ..
+        //    ...
+        //   <atom:entry>
+        //     <atom:id>tag:nsi.dk,2011:doseringsforslag/dosageunit/v1/13709460140000000001</atom:id>
+        //                                                             |- Sidste del af ovenstående ID er det offset vi skal sende med i næste request
+        //     ...
+        //   </atom:entry>
+
+        NodeList childNodes = atomFeedNode.getLastChild().getChildNodes();
+        for (int i=0; i<childNodes.getLength(); ++i) {
+            Node currentChild = childNodes.item(i);
+            if (currentChild.getLocalName().equals("id")) {
+                String completeId = currentChild.getTextContent();
+                return completeId.substring(completeId.lastIndexOf("/")+1);
+            }
+        }
         return null;
     }
 
