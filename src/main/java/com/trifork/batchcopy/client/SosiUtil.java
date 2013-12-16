@@ -183,7 +183,6 @@ public class SosiUtil {
             uc.setRequestProperty("SOAPAction", "\"" + action + "\"");
             uc.setRequestProperty("Content-Type", "text/xml; encoding=utf-8");
             os = uc.getOutputStream();
-            os.write(new byte[] { (byte)0xEF, (byte)0xBB, (byte)0xBF });
             IOUtils.write(docXml, os, "UTF-8");
             os.flush();
             if (uc.getResponseCode() != 200) {
