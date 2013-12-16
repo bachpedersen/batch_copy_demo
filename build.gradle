@@ -63,7 +63,7 @@ dependencies {
             [group: 'org.springframework',    name: 'spring-context',       version: '3.2.2.RELEASE'],
 
             //# Seal requirements
-            [group: 'dk.sosi.seal',           name: 'seal',                 version: '2.1.6'],
+            [group: 'dk.sosi.seal',           name: 'seal',                 version: '2.1.8'],
             [group: 'axis',                   name: 'axis',                 version: '1.4'],
             [group: 'com.unboundid',          name: 'unboundid-ldapsdk',    version: '2.2.0'],
             [group: 'commons-codec',          name: 'commons-codec',        version: '1.5'],
